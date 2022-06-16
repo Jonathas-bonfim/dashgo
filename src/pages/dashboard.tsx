@@ -3,9 +3,10 @@ import dynamic from 'next/dynamic';
 import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar";
 import { ApexOptions } from "apexcharts";
+
 const Chart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
-})
+});
 
 export default function Dashboard() {
   const options: ApexOptions = {
