@@ -2,7 +2,7 @@ import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader
 import { UseSidebarDrawer } from "../../contexts/SiddebarDrawerContext";
 import { SidebarNav } from "./SidebarNav";
 
-export function SideBar() {
+export function Sidebar() {
   const { isOpen, onClose } = UseSidebarDrawer();
 
   const isDrawerSideBar = useBreakpointValue({
