@@ -79,7 +79,7 @@ export default function Dashboard() {
           alignItems="flex-start"
         >
           <Box
-            p="8"
+            p={["6", "8"]}
             bg="gray.800"
             borderRadius={8}
             h="280" //TODO REMOVER DEPOIS
