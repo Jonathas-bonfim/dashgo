@@ -11,7 +11,7 @@ export function Profile() {
           color="gray.300"
           fontSize="small"
         >
-          jonathas.santos.bonfim@gmail.com
+          jonathas.bonfim@gmail.com
         </Text>
       </Box>
       <Avatar size="md" name="Jônathas Bonfim" src="https://avatars.githubusercontent.com/u/58302084?v=4" />
