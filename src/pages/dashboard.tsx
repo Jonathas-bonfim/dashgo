@@ -1,7 +1,7 @@
 import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
 import dynamic from 'next/dynamic';
 import { Header } from "../components/Header";
-import { SideBar } from "../components/SideBar";
+import { Sidebar } from "../components/Sidebar";
 import { ApexOptions } from "apexcharts";
 
 const Chart = dynamic(() => import('react-apexcharts'), {
@@ -41,9 +41,6 @@ export default function Dashboard() {
         '2021-03-19T00:00:00.00Z',
         '2021-03-20T00:00:00.00Z',
         '2021-03-21T00:00:00.00Z',
-        '2021-03-22T00:00:00.00Z',
-        '2021-03-23T00:00:00.00Z',
-        '2021-03-24T00:00:00.00Z',
       ],
     },
     fill: {
@@ -57,7 +54,7 @@ export default function Dashboard() {
     }
   };
   const series = [
-    { name: 'Series1', data: [31, 120, 10, 28, 61, 18, 109] }
+    { name: 'Series1', data: [31, 120, 10, 28] }
   ];
 
   return (
@@ -71,7 +68,7 @@ export default function Dashboard() {
         mx="auto"
         px="6"
       >
-        <SideBar />
+        <Sidebar />
         <SimpleGrid
           flex="1"
           gap="4"
@@ -83,7 +80,8 @@ export default function Dashboard() {
             bg="gray.800"
             borderRadius={8}
             h="280" //TODO REMOVER DEPOIS
-          // pb="4"
+            w="100%"
+            pb="4"
           >
             <Text fontSize="lg" mb="4">Inscritos da Semana</Text>
             <Chart options={options} series={series} type="area" height={160} />
@@ -93,7 +91,7 @@ export default function Dashboard() {
             bg="gray.800"
             borderRadius={8}
             h="280" //TODO REMOVER DEPOIS
-          // pb="4"
+            pb="4"
           >
             <Text fontSize="lg" mb="4">Taxa de abertura</Text>
             <Chart options={options} series={series} type="area" height={160} />

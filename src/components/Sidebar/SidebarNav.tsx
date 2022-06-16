@@ -11,12 +11,12 @@ export function SidebarNav() {
       align="flex-start"
     >
       <NavSection title="Geral">
-        <NavLinkProps icon={RiDashboardLine}>Dashboard</NavLinkProps>
-        <NavLinkProps icon={RiContactsLine}>Usuários</NavLinkProps>
+        <NavLinkProps icon={RiDashboardLine} href="/dashboard">Dashboard</NavLinkProps>
+        <NavLinkProps icon={RiContactsLine} href="/users">Usuários</NavLinkProps>
       </NavSection>
       <NavSection title="AUTOMAÇÃO">
-        <NavLinkProps icon={RiInputMethodLine}>Formulários</NavLinkProps>
-        <NavLinkProps icon={RiGitMergeLine}>Automação</NavLinkProps>
+        <NavLinkProps icon={RiInputMethodLine} href="/forms">Formulários</NavLinkProps>
+        <NavLinkProps icon={RiGitMergeLine} href="/automation">Automação</NavLinkProps>
       </NavSection>
 
     </Stack>
