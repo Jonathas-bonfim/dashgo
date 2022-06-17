@@ -61,15 +61,16 @@ export default function CreateUser() {
               <Input
                 name="name"
                 label="Nome Completo"
+                {...register("name")}
                 error={errors.name}
-                {...register}
               />
               <Input
                 name="email"
                 type="email"
                 label="E-mail"
+                {...register("email")}
+
                 error={errors.email}
-                {...register}
               />
             </SimpleGrid>
 
@@ -78,15 +79,15 @@ export default function CreateUser() {
                 name="password"
                 type="password"
                 label="Senha"
+                {...register("password")}
                 error={errors.password}
-                {...register}
               />
               <Input
                 name="password_confirmation"
                 type="password"
                 label="Confirmação da senha"
+                {...register("password_confirmation")}
                 error={errors.password_confirmation}
-                {...register}
               />
             </SimpleGrid>
           </VStack>
@@ -99,7 +100,7 @@ export default function CreateUser() {
               <Button
                 colorScheme="pink"
                 type="submit"
-                isLoading={formState.isSubmitting}
+              // isLoading={formState.isSubmitting}
               >
                 Salvar
               </Button>
