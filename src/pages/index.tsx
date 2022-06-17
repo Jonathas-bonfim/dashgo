@@ -8,17 +8,16 @@ type SignInFormData = {
   email: string;
   password: string;
 }
+const signInFormSchema = yup.object().shape({
+  email: yup.string().required('Email Obrigatório').email('E-mail inválido'),
+  password: yup.string().required('Senha Obrigatória'),
+});
 
 export default function SignIn() {
-  const signInFormSchema = yup.object().shape({
-    email: yup.string().required('Email Obrigatório').email('E-mail inválido'),
-    password: yup.string().required('Senha Obrigatória'),
-  });
   const { register, handleSubmit, formState } = useForm({
     resolver: yupResolver(signInFormSchema)
   });
   const { errors } = formState;
-
 
   const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
